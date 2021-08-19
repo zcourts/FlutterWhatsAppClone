@@ -1,0 +1,47 @@
+query FindMessages($arcql: String!, $after: String, $limit: Int=25)
+{
+  find(type:Message, arcql: $arcql, first: $limit, after: $after){
+    edges {
+      node {
+        ... on Message {
+          ... message
+        }
+      }
+    }
+  }
+}
+
+fragment message on Message {
+  hypi {... hypi}
+  from{...user}
+  to{...user}
+  in{...group}
+  text
+  replies{...message}
+}
+
+fragment hypi on Hypi {
+  id
+  created
+  updated
+  trashed
+  createdBy
+  instanceId
+}
+
+fragment user on User {
+  hypi{...hypi}
+  account{username}
+  stories{...story}
+}
+
+fragment group on MessageGroup {
+  hypi{...hypi}
+  members{account{username}}
+}
+
+fragment story on UserStory {
+  hypi{...hypi}
+  img
+  text
+}

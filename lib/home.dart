@@ -1,19 +1,19 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterwhatsapp/pages/call_screen.dart';
-import 'package:flutterwhatsapp/pages/camera_screen.dart';
-import 'package:flutterwhatsapp/pages/chat_screen.dart';
-import 'package:flutterwhatsapp/pages/status_screen.dart';
+import 'package:fwat/pages/call_screen.dart';
+import 'package:fwat/pages/camera_screen.dart';
+import 'package:fwat/pages/chat_screen.dart';
+import 'package:fwat/pages/status_screen.dart';
 
-class WhatsAppHome extends StatefulWidget {
+class Homescreen extends StatefulWidget {
   final List<CameraDescription> cameras;
-  WhatsAppHome({this.cameras});
+  Homescreen({this.cameras});
 
   @override
-  _WhatsAppHomeState createState() => _WhatsAppHomeState();
+  _HomescreenState createState() => _HomescreenState();
 }
 
-class _WhatsAppHomeState extends State<WhatsAppHome>
+class _HomescreenState extends State<Homescreen>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
   bool showFab = true;

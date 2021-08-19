@@ -1,0 +1,27 @@
+targets:
+  $default:
+    sources:
+      - lib/**
+      - graphql/**
+      - .hypi/generated-schema.graphql
+      - $package$
+    builders:
+      artemis:
+        options:
+          schema_mapping:
+            - schema: .hypi/generated-schema.graphql
+              output: lib/models/graphql/graphql.dart
+              queries_glob: graphql/*.graphql
+              naming_scheme: pathedWithFields
+              type_name_field: __typename
+              append_type_name: true
+          custom_parser_import: 'package:graphbrainz_example/coercers.dart'
+          scalar_mapping:
+            - graphql_type: DateTime
+              dart_type: DateTime
+            - graphql_type: Json
+              dart_type: Set
+            - graphql_type: Long
+              dart_type: int
+            - graphql_type: Any
+              dart_type: String

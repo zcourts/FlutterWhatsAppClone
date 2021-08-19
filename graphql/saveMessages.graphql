@@ -1,0 +1,6 @@
+mutation SaveMessagesQuery{
+    upsert(values: { Message: [{ text: "Test" }] }) {
+        id
+        created
+    }
+}

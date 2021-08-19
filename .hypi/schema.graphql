@@ -1,0 +1,21 @@
+type Message {
+   from: User
+   to: User
+   in: MessageGroup
+   text: String
+   replies: [Message!]
+}
+
+type User {
+   account: Account!
+   stories: [UserStory!]
+}
+
+type MessageGroup {
+   members: [User!]
+}
+
+type UserStory {
+   text: String
+   img: String
+}

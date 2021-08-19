@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterwhatsapp/pages/store_page_view.dart';
+import 'package:fwat/pages/store_page_view.dart';
 
 class StatusScreen extends StatelessWidget {
   @override

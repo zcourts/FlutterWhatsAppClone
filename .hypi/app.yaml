@@ -1,0 +1,12 @@
+name: whatsapp
+label: Whatsapp
+hypi:
+  id: 01FBVKG3PDEH8P7NKFYRZG6P54
+releases:
+  - name: latest
+    schema:
+      types: schema.graphql
+    status: PUBLISHED
+    notes: Remove these notes and paste or type in your own.
+    hypi:
+      id: 01FBVKG32ZXXRB2C1Z15XP6C4V
